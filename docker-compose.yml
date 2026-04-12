@@ -1,0 +1,32 @@
+services:
+  # O nosso ERP Laravel
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      - APP_ENV=production
+      - APP_DEBUG=false
+    networks:
+      - base-do-prumo-network
+
+  # O Banco de Dados (PostgreSQL é altamente recomendado para ERPs)
+  db:
+    image: postgres:15-alpine
+    restart: always
+    environment:
+      POSTGRES_DB: base_do_prumo
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - base-do-prumo-network
+
+networks:
+  base-do-prumo-network:
+    driver: bridge
+
+volumes:
+  pgdata:
