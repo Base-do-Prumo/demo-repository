@@ -1,9 +1,9 @@
 FROM nginx:1.27-alpine
 
-WORKDIR /usr/share/nginx/html
+WORKDIR /var/www/html
 
-# Mantém o build simples para validar deploy no Coolify.
-COPY index.html ./index.html
+# Copia a aplicação para ser servida pelo Nginx.
+COPY . /var/www/html
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
