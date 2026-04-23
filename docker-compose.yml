@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     restart: unless-stopped
     depends_on:
-      - adminer
+      - phpmyadmin
     expose:
       - "80"
 
@@ -20,15 +20,16 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
 
-  adminer:
-    image: adminer:4
+  phpmyadmin:
+    image: phpmyadmin:5-apache
     restart: unless-stopped
     depends_on:
       - db
     environment:
-      ADMINER_DEFAULT_SERVER: db
+      PMA_HOST: db
+      PMA_PORT: 3306
     expose:
-      - "8080"
+      - "80"
 
 volumes:
   mysql_data:
