@@ -1,8 +1,20 @@
-![Auto Assign](https://github.com/Base-do-Prumo/demo-repository/actions/workflows/auto-assign.yml/badge.svg)
+# Demo Repository
 
-![Proof HTML](https://github.com/Base-do-Prumo/demo-repository/actions/workflows/proof-html.yml/badge.svg)
+Projeto com estrutura separada em `frontend` e `backend`, com MySQL e phpMyAdmin via Docker Compose.
 
-# Welcome to your organization's demo respository
-This code repository (or "repo") is designed to demonstrate the best GitHub has to offer with the least amount of noise.
+## Estrutura
 
-The repo includes an `index.html` file (so it can render a web page), two GitHub Actions workflows, and a CSS stylesheet dependency.
+- `frontend/`: arquivos de interface (`public`) e pasta `components`
+- `backend/`: app PHP (`public`), `config`, `database` e pasta `components`
+- `nginx/`: roteamento Nginx (app, `/db/` e `/front/`)
+
+## Variaveis obrigatorias
+
+Configure no ambiente (ex.: Coolify):
+
+- `MYSQL_DATABASE`
+- `MYSQL_USER`
+- `MYSQL_PASSWORD`
+- `MYSQL_ROOT_PASSWORD`
+
+Use o arquivo `.env.example` apenas como referencia de nomes.

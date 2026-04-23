@@ -12,13 +12,13 @@ if (isset($_SESSION["user"])) {
 $error = "";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    require_once __DIR__ . "/config.php";
+    require_once __DIR__ . "/../config/config.php";
 
     $username = trim((string) ($_POST["username"] ?? ""));
     $password = (string) ($_POST["password"] ?? "");
 
     if ($username === "" || $password === "") {
-        $error = "Preencha usuário e senha.";
+        $error = "Preencha usuario e senha.";
     } else {
         try {
             $pdo = db_connect();
@@ -35,9 +35,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 exit;
             }
 
-            $error = "Usuário ou senha inválidos.";
+            $error = "Usuario ou senha invalidos.";
         } catch (Throwable $e) {
-            $error = "Erro ao conectar no banco. Verifique as variáveis e migrations.";
+            $error = "Erro ao conectar no banco. Verifique as variaveis e migrations.";
         }
     }
 }
@@ -105,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <h1>Entrar</h1>
     <p>Login conectado ao MySQL.</p>
     <form method="post" action="/">
-      <label for="username">Usuário</label>
+      <label for="username">Usuario</label>
       <input id="username" name="username" required>
 
       <label for="password">Senha</label>
@@ -116,7 +116,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <?php if ($error !== ""): ?>
       <div class="error"><?= htmlspecialchars($error, ENT_QUOTES, "UTF-8") ?></div>
     <?php endif; ?>
-    <div class="hint">Use os usuários do arquivo SQL de seed para testar.</div>
+    <div class="hint">Use os usuarios do arquivo SQL de seed para testar.</div>
   </main>
 </body>
 </html>

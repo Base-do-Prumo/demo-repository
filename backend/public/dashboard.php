@@ -46,7 +46,7 @@ $username = (string) $_SESSION["user"]["username"];
 <body>
   <main class="card">
     <h1>Login realizado com sucesso</h1>
-    <p>Usuário logado: <strong><?= htmlspecialchars($username, ENT_QUOTES, "UTF-8") ?></strong></p>
+    <p>Usuario logado: <strong><?= htmlspecialchars($username, ENT_QUOTES, "UTF-8") ?></strong></p>
     <p>Gerencie o banco em <a href="/db/" target="_blank" rel="noopener noreferrer">phpMyAdmin</a>.</p>
     <a href="/logout.php">Sair</a>
   </main>
