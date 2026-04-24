@@ -1,4 +1,4 @@
-# Padrao de Code Review
+# Padrao de Code Review.
 
 ## Linguagens
 
