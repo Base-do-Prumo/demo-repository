@@ -1,0 +1,24 @@
+---
+description: Usa a documentacao mae como referencia obrigatoria
+alwaysApply: true
+---
+
+# Regra Base de Documentacao
+
+Antes de implementar, refatorar, revisar ou responder sobre codigo deste projeto:
+
+1. Ler `documentacoes/documentacao_mae.md`.
+2. Identificar quais documentacoes filhas se aplicam a tarefa.
+3. Priorizar regras na ordem definida pela documentacao mae.
+
+## Aplicacao obrigatoria por tarefa
+
+- **Sempre** citar no raciocinio interno a documentacao mae como fonte principal.
+- Em tarefas de codigo, seguir as regras das documentacoes filhas relevantes.
+- Em caso de conflito, usar a prioridade definida em `documentacoes/documentacao_mae.md`.
+- No frontend, implementar em **Vue.js (Vue 3 + TypeScript)**; nao usar HTML+JS puro como implementacao final.
+
+## Entrega
+
+- Implementar de forma consistente com seguranca, modularizacao e infraestrutura atuais.
+- Informar de forma breve quais guias foram considerados quando a tarefa for tecnica/substantiva.
