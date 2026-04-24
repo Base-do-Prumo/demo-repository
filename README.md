@@ -21,4 +21,6 @@ Use o arquivo `.env.example` apenas como referencia de nomes.
 
 ## Configuração de Teste de Integrações
 
-- Teste 1 
+- Teste 1
+- Teste 2
+  
