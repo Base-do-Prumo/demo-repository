@@ -18,3 +18,7 @@ Configure no ambiente (ex.: Coolify):
 - `MYSQL_ROOT_PASSWORD`
 
 Use o arquivo `.env.example` apenas como referencia de nomes.
+
+## Configuração de Teste de Integrações
+
+- Teste 1 
