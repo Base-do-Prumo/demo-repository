@@ -1,4 +1,4 @@
-sAaaa77SqqqDces:
+services:
   app:
     build:
       context: .
