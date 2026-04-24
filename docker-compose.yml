@@ -23,6 +23,7 @@ services:
       DB_DATABASE: ${MYSQL_DATABASE}
       DB_USERNAME: ${MYSQL_USER}
       DB_PASSWORD: ${MYSQL_PASSWORD}
+    # Servico interno (PHP-FPM), sem dominio publico no Coolify.
     expose:
       - "9000"
 
@@ -45,6 +46,8 @@ services:
     environment:
       PMA_HOST: db
       PMA_PORT: 3306
+      # Use a URL completa com /db/ no Coolify.
+      PMA_ABSOLUTE_URI: ${PMA_ABSOLUTE_URI:-https://basedoprumo.chatboot.cloud/db/}
     expose:
       - "80"
 
