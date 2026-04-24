@@ -5,7 +5,7 @@ declare(strict_types=1);
 session_start();
 require_once __DIR__ . "/../config/config.php";
 
-const MAX_LOGIN_ATTEMPTS = 5 # teste para quebra projeto
+const MAX_LOGIN_ATTEMPTS = 5;
 const LOCKOUT_SECONDS = 120;
 
 header("Content-Type: application/json; charset=utf-8");
