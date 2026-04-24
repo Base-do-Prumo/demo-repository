@@ -30,3 +30,4 @@ Use o arquivo `.env.example` apenas como referencia de nomes.
 - Teste 7
 ## Configuração de Teste AViso de Deploy IF Bem ou Mau
 - Teste 1
+- Teste 2 
