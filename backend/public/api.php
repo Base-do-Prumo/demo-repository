@@ -1,24 +1,24 @@
-# <?php
+<?php
 
-# declare(strict_types=1);
+declare(strict_types=1);
 
-#session_start();
-#require_once __DIR__ . "/../config/config.php";
+session_start();
+require_once __DIR__ . "/../config/config.php";
 
-#const MAX_LOGIN_ATTEMPTS = 5;
-#const LOCKOUT_SECONDS = 120;
+const MAX_LOGIN_ATTEMPTS = 5;
+const LOCKOUT_SECONDS = 120;
 
-#header("Content-Type: application/json; charset=utf-8");
+header("Content-Type: application/json; charset=utf-8");
 
-#if (!isset($_SESSION["csrf_token"])) {
+if (!isset($_SESSION["csrf_token"])) {
     $_SESSION["csrf_token"] = bin2hex(random_bytes(32));
-#}
+}
 
-#$method = $_SERVER["REQUEST_METHOD"] ?? "GET";
-#$pathInfo = (string) ($_SERVER["PATH_INFO"] ?? "/api");
-#$normalizedPath = preg_replace("#^/api(?:\\.php)?/?#", "", $pathInfo);
-#$route = trim((string) $normalizedPath, "/");
-## -- > Comentarios Feitos Para Testa A Automação da Ia Informa se o projeto foi quebrando em alguma ponta <-- ##
+$method = $_SERVER["REQUEST_METHOD"] ?? "GET";
+$pathInfo = (string) ($_SERVER["PATH_INFO"] ?? "/api");
+$normalizedPath = preg_replace("#^/api(?:\\.php)?/?#", "", $pathInfo);
+$route = trim((string) $normalizedPath, "/");
+
 if ($route === "" && $method === "GET") {
     json_response(200, [
         "ok" => true,
