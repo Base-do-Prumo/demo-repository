@@ -1,0 +1,13 @@
+---
+description: Frontend obrigatoriamente em Vue.js com TypeScript
+alwaysApply: true
+---
+
+# Frontend Vue obrigatorio
+
+Para tarefas de frontend neste projeto:
+
+1. Usar Vue.js (Vue 3) com TypeScript.
+2. Implementar em componentes/paginas Vue, nao em HTML+JS puro.
+3. Consumir backend via API (`/api/...`), mantendo separacao de camadas.
+4. Organizar codigo em `frontend/src` (`pages`, `components`, `services`, `stores`).

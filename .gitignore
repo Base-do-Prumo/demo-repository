@@ -1,0 +1,12 @@
+# Environment
+.env
+
+# Frontend build/deps
+frontend/node_modules/
+frontend/dist/
+frontend/*.tsbuildinfo
+frontend/vite.config.js
+frontend/vite.config.d.ts
+
+# Local backend PHP runtime config
+backend/php-dev.ini
