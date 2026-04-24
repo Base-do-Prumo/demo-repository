@@ -27,3 +27,4 @@ Use o arquivo `.env.example` apenas como referencia de nomes.
 - Teste 4
 - Teste 5
 - Teste 6
+- Teste 7
