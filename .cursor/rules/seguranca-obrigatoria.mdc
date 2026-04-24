@@ -1,0 +1,22 @@
+---
+description: Regras minimas obrigatorias de seguranca no projeto
+alwaysApply: true
+---
+
+# Seguranca Obrigatoria
+
+Aplicar estas regras em toda tarefa tecnica:
+
+1. Nunca versionar segredos reais (senhas, tokens, chaves, .env).
+2. Usar apenas variaveis de ambiente para credenciais.
+3. Validar entrada no backend (tipo, formato, tamanho).
+4. Usar queries parametrizadas (prepared statements/ORM seguro).
+5. Nao confiar em validacao apenas no frontend.
+6. Manter autenticacao/autorizacao no backend.
+
+## Checklist rapido antes de concluir
+
+- [ ] Sem segredo hardcoded em codigo ou compose.
+- [ ] Sem risco obvio de SQL Injection.
+- [ ] Tratamento minimo de erro sem expor detalhe sensivel.
+- [ ] Mudanca compativel com `documentacoes/seguranca.md`.

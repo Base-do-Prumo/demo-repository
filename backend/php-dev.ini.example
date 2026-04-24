@@ -1,0 +1,11 @@
+; Copie este arquivo para backend/php-dev.ini e ajuste para seu ambiente local.
+; Exemplo no Windows (Winget PHP):
+; extension_dir="C:/Users/SEU_USUARIO/AppData/Local/Microsoft/WinGet/Packages/PHP.PHP.8.3_Microsoft.Winget.Source_8wekyb3d8bbwe/ext"
+; Exemplo no Linux:
+; extension_dir="/usr/lib/php/modules"
+
+extension_dir="/caminho/para/ext"
+extension=pdo_mysql
+date.timezone=America/Sao_Paulo
+display_errors=On
+log_errors=On
