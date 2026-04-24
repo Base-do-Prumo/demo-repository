@@ -19,8 +19,8 @@ Configure no ambiente (ex.: Coolify):
 
 Use o arquivo `.env.example` apenas como referencia de nomes.
 
-## Configuração de Teste de Integrações
+## Configuração de Teste de Integrações n8n-deploy
 
 - Teste 1
 - Teste 2
-  
+- Teste 3
